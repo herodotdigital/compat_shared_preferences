@@ -1,0 +1,20 @@
+name: compat_shared_preferences
+description: Flutter plugin (based on flutter/plugins/shared_preferences) for reading and writing simple key-value pairs.
+  Wraps NSUserDefaults on iOS and SharedPreferences on Android with Android custom shared preferences name.
+version: 0.0.1+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.goldapp.compat_shared_preferences
+    pluginClass: CompatSharedPreferencesPlugin
