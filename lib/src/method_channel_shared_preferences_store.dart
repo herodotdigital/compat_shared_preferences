@@ -27,12 +27,12 @@ class MethodChannelSharedPreferencesStore
   }
 
   @override
-  Future<bool> clear() {
-    return _channel.invokeMethod<bool>('clear');
+  Future<bool> clear() async {
+    return (await _channel.invokeMethod<bool>('clear')) ?? false;
   }
 
   @override
-  Future<Map<String, Object>> getAll() {
-    return _channel.invokeMapMethod<String, Object>('getAll');
+  Future<Map<String, Object>> getAll() async {
+    return (await _channel.invokeMapMethod<String, Object>('getAll')) ?? {};
   }
 }
